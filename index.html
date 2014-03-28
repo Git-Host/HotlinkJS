@@ -5,36 +5,36 @@
         <link rel="stylesheet" type="text/css" href="vendor/css/bootstrap.css">
         <style type="text/css">
         </style>
-        <title>permalink.js</title>
+        <title>hotlink.js</title>
     </head>
     <body class="jumbotron">
         <div class="col-lg-6 col-lg-offset-3 form" style="padding: 20px">
-            <h1>PermalinkJS</h1>
-            <p style="color: #999;">Getting permalinks made <em>easy</em> just for <strong>YOU</strong> !</p>
+            <h1>HotlinkJS</h1>
+            <p style="color: #999;">Getting hotlinks made <em>easy</em> just for <strong>YOU</strong> !</p>
             <div class="form-group">
                 <input class="form-control" id="sourceUrl" placeholder="Paste your link here" type="text"/>
             </div>
             <div class="form-group">
                 <div class="input-group">
-                    <input class="form-control" id="permalinkUrl" placeholder="Permalink will pop here" type="text"/>
+                    <input class="form-control" id="hotlinkUrl" placeholder="Hotlink will pop here" type="text"/>
                     <span class="input-group-btn">
-                        <button class="btn btn-default" id="copyPermalink" type="button">Copy</button>
+                        <button class="btn btn-default" id="copyHotlink" type="button">Copy</button>
                     </span>
                 </div>
             </div>
             <div class="alert alert-danger" id="message" style="display: none;">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
-                <strong>Fail!</strong> Your link doesn't appear to be valid.
+                <strong>Fail !</strong> Your link doesn't appear to be valid.
             </div>
         </div>
 
         <script src="vendor/js/jquery.js" type="text/javascript"></script>
         <script src="vendor/js/bootstrap.js" type="text/javascript"></script>
-        <script src="permalink.js" type="text/javascript"></script>
+        <script src="hotlink.js" type="text/javascript"></script>
         <script type="text/javascript">
             jQuery(function($) {
-                $("#copyPermalink").click(function() {
-                    var permalink = $("#permalinkUrl").val();
+                $("#copyHotlink").click(function() {
+                    var hotlink = $("#hotlinkUrl").val();
                     // TODO
                 });
                 $("#sourceUrl").keyup(function() {
@@ -47,16 +47,16 @@
                         return;
                     }
 
-                    var permalink = generatePermalink(url);
+                    var hotlink = generateHotlink(url);
 
-                    if (!permalink) {
+                    if (!hotlink) {
                         $("#message").show("fast");
                         $("#sourceUrl").parent().addClass("has-error");
                         $("#sourceUrl").parent().removeClass("has-success");
                     }
                     else {
                         $("#message").hide("fast");
-                        $("#permalinkUrl").val(permalink);
+                        $("#hotlinkUrl").val(hotlink);
                         $("#sourceUrl").parent().addClass("has-success");
                         $("#sourceUrl").parent().removeClass("has-error");
                     }
