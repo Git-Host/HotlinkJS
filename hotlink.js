@@ -1,7 +1,7 @@
 var driveHotlinkPattern = "https://drive.google.com/uc?export=view&id=<fileId>";
-var driveSourcePattern = /^https:\/\/drive\.google\.com\/file\/d\/([0-9a-zA-Z_-]+)\/edit\?usp=sharing$/i;
+var driveSourcePattern = /^https?:\/\/drive\.google\.com\/file\/d\/([0-9a-zA-Z_-]+)\/edit\?usp=sharing$/i;
 var dropboxHotlinkPattern = "https://dl.dropbox.com/s/<fileId>/<fileName>";
-var dropboxSourcePattern = /^https:\/\/www\.dropbox\.com\/s\/([0-9a-z]+)\/(.*)+$/i;
+var dropboxSourcePattern = /^https?:\/\/www\.dropbox\.com\/s\/([0-9a-z]+)\/(.*)+$/i;
 
 function generateHotlink(url) {
     var hotlink;
