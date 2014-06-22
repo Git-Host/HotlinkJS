@@ -27,4 +27,3 @@ function generateHotlink(url) {
 
     return hotlink;
 }
-
