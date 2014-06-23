@@ -11,6 +11,14 @@
                 color: #999;
                 font-size: 1em;
             }
+            .footer * {
+                display: inline-block;
+            }
+            .social.medias {
+                margin-right: 20px;
+                position: absolute;
+                right: 0;
+            }
         </style>
         <title>HotlinkJS</title>
         <script>
@@ -24,6 +32,16 @@
         </script>
     </head>
     <body class="jumbotron">
+        <div id="fb-root"></div>
+        <script>
+            (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.0";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
         <div class="col-lg-6 col-lg-offset-3 form" style="padding: 20px">
             <h1>HotlinkJS</h1>
             <p style="color: #999;">Getting hotlinks made <em>easy</em> just for <strong>YOU</strong> !</p>
@@ -46,6 +64,10 @@
                 <p>Any suggestion ? Found a bug ?
                     <a href="mailto:mickael.allonneau@gmail.com" title="mickael.allonneau@gmail.com">Get in touch !</a>
                 </p>
+                <div class="social medias">
+                    <div class="fb-like" data-href="https://flawyte.github.io/HotlinkJS/" data-layout="button_count"
+                    data-action="like" data-show-faces="false" data-share="true"></div>
+                </div>
             </div>
         </div>
 
