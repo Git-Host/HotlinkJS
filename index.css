@@ -1,0 +1,19 @@
+.footer {
+  margin-top: 20px;
+}
+.footer p {
+  color: #999;
+  font-size: 1em;
+}
+.footer * {
+  display: inline-block;
+  vertical-align: middle !important;
+}
+#___plusone_0 {
+  width: 65px !important;
+}
+.social.medias {
+  margin-right: -10px;
+  position: absolute;
+  right: 0;
+}
